@@ -116,3 +116,12 @@ for dataset in failures:
     print(dataset)
 
 # %%
+tas_daily = xr.open_dataset(
+    "tas_3hr_ACCESS-ESM1-5_historical_r10i1p1f1_gn_201001010300-201501010000.nc"
+)
+tas_daily_sub = tas_daily.isel(lat=slice(0, 10), lon=slice(0, 10))
+tas_daily_sub.to_netcdf(
+    "tas_3hr_ACCESS-ESM1-5_historical_r10i1p1f1_gn_201001010300-201501010000_subset.nc"
+)
+
+# %%
