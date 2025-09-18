@@ -1,9 +1,9 @@
 # xcdat-data
 
-This repository exists to hold example datasets for [xcdat](https://xcdat.readthedocs.io/en/latest/getting-started-guide/overview.html) (e.g., as used in the documentation)
+This repository exists to hold resource and example datasets for [xcdat](https://xcdat.readthedocs.io/en/latest/getting-started-guide/overview.html) (e.g., as used in the documentation)
 that would bloat the [main repository](https://github.com/xCDAT/xcdat) if included there.
 
-## Available Datasets
+## Available Example Datasets
 
 Here's your updated table with the new entries:
 
@@ -17,6 +17,12 @@ Here's your updated table with the new entries:
 | `thetao_omon_cesm2` | `thetao_Omon_CESM2_historical_r1i1p1f1_gn_185001-201412_subset.nc`                  | Monthly ocean potential temperature from the CESM2 model.    | First three time points     | 37 MB            |
 | `cl_amon_e3sm2`     | `cl_Amon_E3SM-2-0_historical_r1i1p1f1_gr_185001-189912_subset.nc`                   | Monthly cloud fraction data from the E3SM-2-0 model.         | `1870-01-01 to 1874-12-31`  | 54 MB            |
 | `ta_amon_e3sm2`     | `ta_Amon_E3SM-2-0_historical_r1i1p1f1_gr_185001-189912_subset.nc`                   | Monthly air temperature data from the E3SM-2-0 model.        | `1870-01-01 to 1874-12-31`  | 14 MB            |
+
+## Available Resource Datasets
+
+| Key         | Filename                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                         | Subset | Approx. Filesize |
+| ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------- |
+| `navy_land` | `resources/navy_land.nc` | Navy land mask dataset. The `navy_land.nc` file is used as the high-resolution land-sea mask. This file is sourced from the PCMDI (Program for Climate Model Diagnosis and Intercomparison) Metrics Package. It is a fixed asset (not expected to change) and is available at: [https://github.com/PCMDI/pcmdi_metrics/blob/main/share/data/navy_land.nc](https://github.com/PCMDI/pcmdi_metrics/blob/main/share/data/navy_land.nc) | Global | 8.97 MB          |
 
 ## Usage
 
