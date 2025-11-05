@@ -5,8 +5,6 @@ that would bloat the [main repository](https://github.com/xCDAT/xcdat) if includ
 
 ## Available Example Datasets
 
-Here's your updated table with the new entries:
-
 | Key                 | Filename                                                                            | Description                                                  | Subset                      | Approx. Filesize |
 | ------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------- | ---------------- |
 | `pr_amon_access`    | `pr_Amon_ACCESS-ESM1-5_historical_r10i1p1f1_gn_185001-201412_subset.nc`             | Monthly precipitation data from the ACCESS-ESM1-5 model.     | `1870-01-01 to 1874-12-31`  | 7 MB             |
