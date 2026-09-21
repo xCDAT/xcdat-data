@@ -22,6 +22,7 @@ that would bloat the [main repository](https://github.com/xCDAT/xcdat) if includ
 | ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------- |
 | `navy_land` | `resources/navy_land.nc` | Navy land mask dataset. The `navy_land.nc` file is used as the high-resolution land-sea mask. This file is sourced from the PCMDI (Program for Climate Model Diagnosis and Intercomparison) Metrics Package. It is a fixed asset (not expected to change) and is available at: [https://github.com/PCMDI/pcmdi_metrics/blob/main/share/data/navy_land.nc](https://github.com/PCMDI/pcmdi_metrics/blob/main/share/data/navy_land.nc) | Global | 8.97 MB          |
 | `kerchunk_list` | `resources/kerchunk_list.json` | Kerchunk catalog of CMIP6 dataset references for remote-data demonstrations. | N/A | 50 MB |
+| `ecsdata` | `resources/ecsdata.json` | Equilibrium climate sensitivity (ECS) metadata for CMIP6 models. | 53 models | 2 KB |
 
 ## CWSS 2026 Remote Kerchunk Demo
 
@@ -34,6 +35,13 @@ presentation](https://docs.google.com/presentation/d/1eDkwAIJC_peYnRnLnicplOPiR1
 
 Consumers should access this file through a pinned xcdat-data release tag or
 commit SHA, not an unpinned branch URL.
+
+`resources/ecsdata.json` supplies the companion ECS metadata for the xCDAT CWSS
+remote-Kerchunk demo. Its values are Gregory-regression ECS estimates from the
+CMIP6 `abrupt-4xCO2` and `piControl` simulations, calculated using the [PCMDI
+Metrics Package ECS implementation](https://github.com/PCMDI/pcmdi_metrics/blob/main/pcmdi_metrics/cloud_feedback/lib/compute_ECS_xr.py).
+The JSON schema is `{model_name: ecs_value}`, where each model name is a string
+and each ECS value is a numeric value in K.
 
 ## Usage
 
