@@ -21,6 +21,19 @@ that would bloat the [main repository](https://github.com/xCDAT/xcdat) if includ
 | Key         | Filename                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                         | Subset | Approx. Filesize |
 | ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------- |
 | `navy_land` | `resources/navy_land.nc` | Navy land mask dataset. The `navy_land.nc` file is used as the high-resolution land-sea mask. This file is sourced from the PCMDI (Program for Climate Model Diagnosis and Intercomparison) Metrics Package. It is a fixed asset (not expected to change) and is available at: [https://github.com/PCMDI/pcmdi_metrics/blob/main/share/data/navy_land.nc](https://github.com/PCMDI/pcmdi_metrics/blob/main/share/data/navy_land.nc) | Global | 8.97 MB          |
+| `kerchunk_list` | `resources/kerchunk_list.json` | Kerchunk catalog of CMIP6 dataset references for remote-data demonstrations. | N/A | 50 MB |
+
+## CWSS 2026 Remote Kerchunk Demo
+
+`resources/kerchunk_list.json` is a ~50 MB snapshot of Kerchunk metadata used by
+xCDAT's [CWSS companion notebook](https://github.com/xCDAT/xcdat/blob/main/docs/demos/26-09-24-cwss-seminar/riotai_example_remote.ipynb).
+It is stored in xcdat-data rather than xcdat to avoid bloating the xCDAT source
+repository. The catalog identifies remote CMIP6 Kerchunk reference JSON files for
+the demo's historical monthly `tas` analysis. See the [companion Google Slides
+presentation](https://docs.google.com/presentation/d/1eDkwAIJC_peYnRnLnicplOPiR1eqiDZj2Sgwfrkvvrg/edit?slide=id.g3fa9c64b4de_0_73#slide=id.g3fa9c64b4de_0_73).
+
+Consumers should access this file through a pinned xcdat-data release tag or
+commit SHA, not an unpinned branch URL.
 
 ## Usage
 
